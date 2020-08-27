@@ -14,63 +14,63 @@ import Pic0 from '../../assets/img/projects/0.png';
 const myProjects = [
     {
         id: 1,
-        image: Pic1,
-        projectName: "Timer App",
-        website: "http://muneeb-timer-app.surge.sh",
-        github: "https://github.com/Muneeb926595/timer-app-tdd"
-    },
-    {
-        id: 2,
-        image: Pic2,
-        projectName: "Quiz Application",
-        website: "http://muneeb-quiz-app.surge.sh/",
-        github: "https://github.com/Muneeb926595/my-quizapp"
-    },
-    {
-        id: 3,
         image: Pic3,
         projectName: "Responsive Website",
         website: "http://muneeb-portfolio.surge.sh/",
         github: "https://github.com/Muneeb926595/my-portfolio"
     },
     {
+        id: 2,
+        image: Pic7,
+        projectName: "Covid 19 Teacker",
+        website: "http://muneeb-covid19-tracker.surge.sh/",
+        github: "https://github.com/Muneeb926595/covid-19-tracker"
+    },
+    {
+        id: 3,
+        image: Pic2,
+        projectName: "Quiz Application",
+        website: "http://muneeb-quiz-app.surge.sh/",
+        github: "https://github.com/Muneeb926595/my-quizapp"
+    },
+    {
         id: 4,
+        image: Pic9,
+        projectName: "Expence Tracker App",
+        website: "http://muneeb-expence-tracker-app.surge.sh/",
+        github: "https://github.com/Muneeb926595/react-expence-tracker-app"
+    },
+    {
+        id: 5,
         image: Pic4,
         projectName: "Todo Application",
         website: "http://muneeb-todo-app.surge.sh/",
         github: "https://github.com/Muneeb926595/todo-app"
     },
     {
-        id: 5,
-        image: Pic5,
-        projectName: "Covid 19 Teacker",
-        website: "http://muneeb-covid19-tracker.surge.sh/",
-        github: "https://github.com/Muneeb926595/covid-19-tracker"
-    },
-    {
         id: 6,
-        image: Pic6,
+        image: Pic8,
         projectName: "Nike Shoes Store",
         website: "http://muneeb-nike-shoes.surge.sh/",
         github: "https://github.com/Muneeb926595/simple-commerce-app"
     },
     {
         id: 7,
-        image: Pic7,
+        image: Pic1,
+        projectName: "Timer App",
+        website: "http://muneeb-timer-app.surge.sh",
+        github: "https://github.com/Muneeb926595/timer-app-tdd"
+    },
+    {
+        id: 8,
+        image: Pic6,
         projectName: "Cortex Website Clone",
         website: "http://muneeb-cotex-clone.surge.sh/",
         github: "https://github.com/Muneeb926595/cortex-website-clone"
     },
     {
-        id: 8,
-        image: Pic8,
-        projectName: "Expence Tracker App",
-        website: "http://muneeb-expence-tracker-app.surge.sh/",
-        github: "https://github.com/Muneeb926595/react-expence-tracker-app"
-    },
-    {
         id: 9,
-        image: Pic9,
+        image: Pic5,
         projectName: "Alice Running App",
         website: "http://muneeb-project4a.surge.sh/",
         github: "https://github.com/Muneeb926595/react-animations-alic-running"
@@ -89,7 +89,7 @@ function Portfolio() {
         <React.Fragment>
             {myProjects.map((project) => {
                 return (
-                    < div className="card" style={{ width: '80%', marginLeft: '12%', marginRight: '0px', marginTop: '2%' }
+                    < div key={project.id} className="card" style={{ width: '80%', marginLeft: '12%', marginRight: '0px', marginTop: '2%' }
                     }>
                         <div className="card-image">
                             <img className="img-fluid" src={project.image} alt={project.projectName}
