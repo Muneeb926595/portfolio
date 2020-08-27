@@ -46,13 +46,13 @@ export default function MySlider() {
                         return (
                             <div className="blog-slider__item swiper-slide">
                                 <div></div>
-                                <div className="blog-slider__img"><img src={client.picture} /></div>
+                                <div className="blog-slider__img"><img src={client.picture} alt={client.title} /></div>
                                 <div className="blog-slider__content"><span className="blog-slider__code">
                                     {client.date}</span>
                                     <div className="blog-slider__title">{client.title}</div>
                                     <div className="blog-slider__text">{client.body}
                                     </div>
-                                    <a className="className=&quot;blog-slider__button" href="#">READ MORE</a>
+                                    <p className="blog-slider__button" style={{ padding: '10px 20px', fontSize: '11px', marginTop: "10%" }}>READ MORE</p>
                                 </div>
                             </div>
                         )

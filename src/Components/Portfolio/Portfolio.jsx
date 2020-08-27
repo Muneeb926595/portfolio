@@ -99,8 +99,8 @@ function Portfolio() {
                             <span className="card-title" style={{ color: 'rgb(0,0,0)' }}>{project.projectName}</span>
                         </div>
                         <div className="card-action">
-                            <a href={project.website} target="_blank">Live Preview</a>
-                            <a href={project.github} target="_blank">Github</a>
+                            <a rel="noopener noreferrer" href={project.website} target="_blank">Live Preview</a>
+                            <a rel="noopener noreferrer" href={project.github} target="_blank">Github</a>
                         </div>
                     </div >
                 )

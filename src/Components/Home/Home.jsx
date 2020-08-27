@@ -1,5 +1,6 @@
 import React from 'react';
 import myImg from '../../assets/img/muneeb.png'
+import MyCv from '../../assets/CV.docx';
 function Home() {
     return (
         <div style={{ height: '100vh', marginLeft: '90px' }}>
@@ -24,7 +25,7 @@ function Home() {
                                 bootstrap, SQL & SQLite. I have excellent communication skills in English and I am always
                                 keen to learn new
                             technologies.<br /><br /></p>
-                            <a href="#" className="download-button" style={{ letterSpacing: '0.5px', fontWeight: '500' }}>Download Resume</a>
+                            <a href={MyCv} className="download-button" style={{ letterSpacing: '0.5px', fontWeight: '500' }} download>Download Resume</a>
                         </div>
                         <div className="col-lg-7" style={{ color: 'rgb(45,46,48)' }}>
                             <div className="border rounded-circle"

@@ -58,7 +58,7 @@ function Services() {
                             <div className="d-flex justify-content-between" style={{ marginTop: '50px' }}>
                                 <div className="d-flex">
                                     <div><img style={{ width: '55px', height: '55px', marginTop: '6px', marginRight: '12px' }}
-                                        src={Img1} />
+                                        src={Img1} alt="customer_img" />
                                     </div>
                                     <div>
                                         <h1
@@ -70,7 +70,7 @@ function Services() {
                                 </div>
                                 <div className="d-flex">
                                     <div><img style={{ width: '50px', height: '50px', marginTop: '6px', marginRight: '12px' }}
-                                        src={Img2} />
+                                        src={Img2} alt="projects_img" />
                                     </div>
                                     <div>
                                         <h1
