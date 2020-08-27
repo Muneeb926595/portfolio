@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ## Available Scripts
 
-http://muneeb-ur-rehman.surge.sh/client
+http://muneeb-ur-rehman.surge.sh
 
 ### `yarn start`
 
