@@ -19,6 +19,7 @@ function App() {
         <Route exact path="/portfolio" component={Portfolio} />
         <Route exact path="/client" component={Client} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="*" component={() => <h1 style={{ marginLeft: '10%' }}>404 Not Found</h1>} />
       </Switch>
     </Router>
   );

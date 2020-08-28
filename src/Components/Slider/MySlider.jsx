@@ -33,17 +33,23 @@ export default function MySlider() {
     const swiper = useRef(null)
     useEffect(() => {
         swiper.current = new Swiper('.swiper-container', {
+            spaceBetween: 30,
             direction: 'vertical',
             loop: true,
-            mousewheel: {
-                invert: false,
-            }
+            mousewheel: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
         });
     }, [])
 
     return (
         <div className="blog-slider swiper-container" style={{ marginleft: '24px', marginRight: '0px', paddingRight: '0px' }}>
-            <div className="blog-slider__wrp swiper-wrapper">
+            <div className="swiper-wrapper">
                 {
                     clients.map((client) => {
                         return (
@@ -61,8 +67,9 @@ export default function MySlider() {
                         )
                     })
                 }
-                <div className="blog-slider__pagination swiper-pagination"></div>
+                <div className="swiper-pagination"></div>
             </div>
         </div>
+
     )
 }
