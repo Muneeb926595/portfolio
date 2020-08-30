@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AddressImg from '../../assets/img/icons8_address_2.svg';
 import EmailImg from '../../assets/img/icons8_email_open.svg';
 import PhoneImg from '../../assets/img/icons8_phone.svg';
+import emailjs from 'emailjs-com';
 function Contact() {
+    let [name, setName] = useState("");
+    let [email, setEmail] = useState("");
+    let [subject, setSubject] = useState("");
+    let [message, setMessage] = useState("");
+    let [sent, setSent] = useState({ isFirst: true, sucess: false });
+
+    //send email to my gmail
+    function sendEmail(e) {
+        e.preventDefault();
+        emailjs.sendForm('gmail', 'template_ltJG77Zs', e.target, 'user_Cd6cR9lwxOnCLwbWFkI3A')
+            .then((result) => {
+                setSent({ isFirst: false, sucess: true });
+                setName("");
+                setEmail("");
+                setSubject("");
+                setMessage("");
+            }, (error) => {
+                setSent({ isFirst: false, sucess: false });
+            });
+    }
+
     return (
         <div style={{ height: '100vh', marginLeft: '90px' }}>
             <section>
@@ -11,33 +33,51 @@ function Contact() {
                         <div className="col-lg-6">
                             <h2
                                 style={{
-                                    color: '#3e3939', fontFamily: 'Poppins, sans-serif', fontWeight: '600', lineHeight: '1.2em', fontSize: '3.2rem', marginBottom: '25px', marginTop: '16px'
+                                    color: '#3e3939', fontFamily: 'Poppins, sans-serif', fontWeight: '600', lineHeight: '1.2em', fontSize: '3.2rem', marginBottom: '10px', marginTop: '10px'
                                 }}>
                                 Let's Get In Touch<br />
                             </h2>
-                            <form id="tex-fo" style={{ padding: '0px' }}>
+                            <div className="alert alert-success" style={{ padding: '7px', marginBottom: '0px', display: `${sent.isFirst ? 'none' : `${sent.sucess ? 'block' : 'none'}`}` }}>
+                                <strong style={{ marginRight: "10px" }}>Success!</strong>
+                                Message Sent Successfully.
+                            </div>
+                            <div className="alert alert-danger" style={{ padding: '7px', marginBottom: '0px', display: `${sent.isFirst ? 'none' : `${sent.sucess ? 'none' : 'block'}`}` }}>
+                                <strong style={{ marginRight: "10px" }}>Failed!</strong>
+                                Message Sending Failes.
+                            </div>
+                            <form onSubmit={sendEmail} id="tex-fo" style={{ padding: '0px' }}>
                                 <div className="text-center d-flex align-items-md-end" style={{ width: '100%' }}>
-                                    <div className="form-group" style={{ width: '50%', marginRight: '10px' }}><input
-                                        className="border-secondary form-control" type="text"
-                                        style={{ fontFamily: 'Poppins, sans-serif', width: '100%' }}
-                                        placeholder="Name" /></div>
-                                    <div className="form-group border-info" id="tex-fo" style={{ width: '50%' }}><input
-                                        className="border-secondary form-control" type="email"
-                                        style={{ fontFamily: 'Poppins, sans-serif', paddingRight: '0', width: '100%' }}
-                                        placeholder="Email" /></div>
+                                    <div className="form-group" style={{ width: '50%', marginRight: '10px' }}>
+                                        <input name="name" value={name} onChange={(e) => { setName(e.target.value) }}
+                                            className="border-secondary form-control" type="text"
+                                            style={{ fontFamily: 'Poppins, sans-serif', width: '100%' }}
+                                            placeholder="Name" required />
+                                    </div>
+                                    <div className="form-group border-info" id="tex-fo" style={{ width: '50%' }}>
+                                        <input name="email" value={email} onChange={(e) => { setEmail(e.target.value) }}
+                                            className="border-secondary form-control" type="email"
+                                            style={{ fontFamily: 'Poppins, sans-serif', paddingRight: '0', width: '100%' }}
+                                            placeholder="Email" required />
+                                    </div>
                                 </div>
-                                <div className="form-group" id="tex-fo"><input className="border-secondary form-control" type="text"
-                                    style={{ fontFamily: ' Poppins, sans-serif', width: '100%' }}
-                                    placeholder="Subject" /></div>
-                                <div className="form-group" id="tex-fo" style={{ fontFamily: 'Poppins, sans-serif' }}><textarea
-                                    className="border-secondary form-control"
-                                    style={{ height: '99px', fontFamily: 'Barlow, sans-serif', width: '100%' }}
-                                    placeholder="Message"></textarea></div>
+                                <div className="form-group" id="tex-fo">
+                                    <input name="subject" value={subject} onChange={(e) => { setSubject(e.target.value) }} className="border-secondary form-control" type="text"
+                                        style={{ fontFamily: ' Poppins, sans-serif', width: '100%' }}
+                                        placeholder="Subject" required />
+                                </div>
+                                <div className="form-group" id="tex-fo" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                                    <textarea name="message" value={message} onChange={(e) => { setMessage(e.target.value) }}
+                                        className="border-secondary form-control"
+                                        style={{ height: '99px', fontFamily: 'Barlow, sans-serif', width: '100%' }}
+                                        placeholder="Message" required>
+
+                                    </textarea>
+                                </div>
+                                <button className="btn btn-success btn-block p-2 mr-2  contact-button" type="submit">
+                                    Send Message
+                                </button>
                             </form>
-                            <button className="btn btn-success btn-block p-2 mr-2 mb-2 contact-button" type="button">
-                                Send Message
-                        </button>
-                            <div style={{ backgroundColor: '#f9f9f9', margin: '0px', marginTop: '30px' }}>
+                            <div style={{ backgroundColor: '#f9f9f9', margin: '0px', marginTop: '20px' }}>
                                 <div className="d-flex justify-content-start"
                                     style={{ padding: '0px', paddingTop: '10px', paddingLeft: '20px', paddingRight: '20px' }}>
                                     <div><img style={{ width: '50px', height: '50px', marginRight: '16px' }}
@@ -51,7 +91,7 @@ function Contact() {
                                     </div>
                                 </div>
                                 <div className="d-flex flex-row">
-                                    <div className="d-flex flex-row" style={{ paddingTop: '10px', paddingLeft: '20px' }}>
+                                    <div className="d-flex flex-row" style={{ paddingTop: '6px', paddingLeft: '20px' }}>
                                         <div><img style={{ width: '50px', height: '50px', marginRight: '16px' }}
                                             src={EmailImg} alt='email_icon' /></div>
                                         <div>
