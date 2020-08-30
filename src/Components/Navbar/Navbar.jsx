@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import HomeImg from '../../assets/img/icons8_home.svg';
 import AboutImg from '../../assets/img/icons8_user.svg';
@@ -6,6 +6,7 @@ import ServicesImg from '../../assets/img/icons8_briefcase.svg';
 import PortfolioImg from '../../assets/img/icons8_portfolio.svg';
 import ClientImg from '../../assets/img/icons8_happy.svg';
 import ContactImg from '../../assets/img/icons8_contact_1.svg';
+
 
 const navLinks = [
     {
