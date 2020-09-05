@@ -28,7 +28,7 @@ function Contact() {
     return (
         <div style={{ height: '100vh', marginLeft: '90px' }}>
             <section>
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-6">
                             <h2
