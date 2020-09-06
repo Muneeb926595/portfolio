@@ -46,7 +46,7 @@ function Contact() {
                                 Message Sending Failes.
                             </div>
                             <form onSubmit={sendEmail} id="tex-fo" style={{ padding: '0px' }}>
-                                <div className="text-center d-flex align-items-md-end" style={{ width: '100%' }}>
+                                <div className="text-center d-flex align-items-end" style={{ width: '100%' }}>
                                     <div className="form-group" style={{ width: '50%', marginRight: '10px' }}>
                                         <input name="name" value={name} onChange={(e) => { setName(e.target.value) }}
                                             className="border-secondary form-control" type="text"
