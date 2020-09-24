@@ -123,7 +123,7 @@ function Portfolio() {
         <React.Fragment>
             {myProjects.map((project) => {
                 return (
-                    < div key={project.id} className="card" style={{ width: '80%', marginLeft: '12%', marginRight: '0px', marginTop: '2%' }
+                    < div key={project.id} className="card" style={{ marginRight: '5%', marginTop: '2%' }
                     }>
                         <div className="card-image">
                             <img className="img-fluid" src={project.image} alt={project.projectName}

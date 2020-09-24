@@ -7,7 +7,7 @@ import BackgroundImg from '../../assets/img/office-front.jpeg'
 
 function Services() {
     return (
-        <div style={{ marginLeft: '90px', height: '100%' }}>
+        <div style={{ height: '100%' }}>
             <section style={{
                 marginTop: '3rem', marginLeft: '50px'
             }}>
@@ -84,7 +84,7 @@ function Services() {
 
                         </div>
                         <div className="col-lg-7">
-                            <div className="col-xs-12 col-sm-6 col-md-6 clearmargin clearpadding col-sm-push-6"
+                            <div className="col-xs-12 col-sm-6 col-md-6  col-sm-push-6"
                                 style={{ backgroundImage: `url(${BackgroundImg})`, backgroundSize: 'cover', height: '400px', backgroundPosition: 'center', width: '100%', marginLeft: '40%' }}>
                             </div>
                             <div

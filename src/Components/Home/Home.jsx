@@ -3,7 +3,7 @@ import myImg from '../../assets/img/muneeb.png'
 import MyCv from '../../assets/CV.docx';
 function Home() {
     return (
-        <div style={{ height: '100vh', marginLeft: '90px' }}>
+        <div style={{ height: '100vh' }}>
             <section>
                 <div className="container">
                     <div className="row">

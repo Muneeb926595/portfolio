@@ -6,14 +6,14 @@ import DevImg from '../../assets/img/icons8_web_accessibility.svg';
 import AppImg from '../../assets/img/icons8_design.svg';
 function About() {
     return (
-        <div style={{ marginLeft: '90px' }}>
+        <div>
             <section>
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-6 d-flex justify-content-md-center align-items-md-center">
                             <div className="row">
                                 <div className="col-md-6 d-md-flex justify-content-md-center align-items-md-center">
-                                    <div style={{ marginLeft: '40px' }}>
+                                    <div>
                                         <div className="card"
                                             style={{ border: 'none', boxShadow: ' 0px 0px 8px 1px rgba(145, 140, 145, 0.35)', borderRadius: '10px' }}>
                                             <div className="card-body">
