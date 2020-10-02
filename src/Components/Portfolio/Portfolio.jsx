@@ -3,12 +3,10 @@ import Pic1 from '../../assets/img/projects/1.png';
 import Pic2 from '../../assets/img/projects/2.png';
 import Pic3 from '../../assets/img/projects/3.png';
 import Pic4 from '../../assets/img/projects/4.png';
-import Pic5 from '../../assets/img/projects/5.png';
 import Pic6 from '../../assets/img/projects/6.png';
 import Pic7 from '../../assets/img/projects/7.png';
 import Pic8 from '../../assets/img/projects/8.png';
 import Pic9 from '../../assets/img/projects/9.png';
-import Pic0 from '../../assets/img/projects/0.png';
 import Pic11 from '../../assets/img/projects/11.png';
 import Pic12 from '../../assets/img/projects/12.png';
 import Pic13 from '../../assets/img/projects/13.png';
@@ -101,20 +99,6 @@ const myProjects = [
         projectName: "Cortex Website Clone",
         website: "http://muneeb-cotex-clone.surge.sh/",
         github: "https://github.com/Muneeb926595/cortex-website-clone"
-    },
-    {
-        id: 13,
-        image: Pic5,
-        projectName: "Alice Running App",
-        website: "http://muneeb-project4a.surge.sh/",
-        github: "https://github.com/Muneeb926595/react-animations-alic-running"
-    },
-    {
-        id: 14,
-        image: Pic0,
-        projectName: "Counter App",
-        website: "http://muneeb_second_react_app.surge.sh/",
-        github: "https://github.com/Muneeb926595/day-light-app"
     }
 ]
 
