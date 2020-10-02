@@ -1,4 +1,5 @@
 import React from 'react';
+import Pic0 from '../../assets/img/projects/0.png';
 import Pic1 from '../../assets/img/projects/1.png';
 import Pic2 from '../../assets/img/projects/2.png';
 import Pic3 from '../../assets/img/projects/3.png';
@@ -22,7 +23,6 @@ const myProjects = [
         website: "http://muneeb-netflix-clone.surge.sh/",
         github: "https://github.com/Muneeb926595/netflix-clone"
     },
-
     {
         id: 2,
         image: Pic13,
@@ -99,6 +99,13 @@ const myProjects = [
         projectName: "Cortex Website Clone",
         website: "http://muneeb-cotex-clone.surge.sh/",
         github: "https://github.com/Muneeb926595/cortex-website-clone"
+    },
+    {
+        id: 13,
+        image: Pic0,
+        projectName: "Iphone Calculator",
+        website: "http://muneeb-calculator.surge.sh/",
+        github: "https://github.com/Muneeb926595/ios-calculator"
     }
 ]
 
