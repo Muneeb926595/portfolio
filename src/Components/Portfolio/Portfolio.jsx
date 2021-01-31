@@ -13,6 +13,7 @@ import Pic11 from '../../assets/img/projects/11.png';
 import Pic12 from '../../assets/img/projects/12.png';
 import Pic13 from '../../assets/img/projects/13.png';
 import Pic14 from '../../assets/img/projects/14.png';
+import Pic15 from '../../assets/img/projects/15.png';
 
 const myProjects = [
 
@@ -81,34 +82,41 @@ const myProjects = [
     },
     {
         id: 10,
+        image: Pic15,
+        projectName: "Music-UI Application",
+        website: "http://music-ui.surge.sh/",
+        github: "https://github.com/Muneeb926595/music-app-ui"
+    },
+    {
+        id: 11,
         image: Pic4,
         projectName: "Todo Application",
         website: "http://muneeb-todo-app.surge.sh/",
         github: "https://github.com/Muneeb926595/todo-app"
     },
     {
-        id: 11,
+        id: 12,
         image: Pic8,
         projectName: "Nike Shoes Store",
         website: "http://muneeb-nike-shoes.surge.sh/",
         github: "https://github.com/Muneeb926595/simple-commerce-app"
     },
     {
-        id: 12,
+        id: 13,
         image: Pic1,
         projectName: "Timer App",
         website: "http://muneeb-timer-app.surge.sh",
         github: "https://github.com/Muneeb926595/timer-app-tdd"
     },
     {
-        id: 13,
+        id: 14,
         image: Pic6,
         projectName: "Cortex Website Clone",
         website: "http://muneeb-cotex-clone.surge.sh/",
         github: "https://github.com/Muneeb926595/cortex-website-clone"
     },
     {
-        id: 14,
+        id: 15,
         image: Pic0,
         projectName: "Iphone Calculator",
         website: "http://muneeb-calculator.surge.sh/",
@@ -121,11 +129,11 @@ function Portfolio() {
         <React.Fragment>
             {myProjects.map((project) => {
                 return (
-                    < div key={project.id} className="card" style={{ marginRight: '5%', marginTop: '2%' }
+                    < div key={project.id} className="card" style={{ marginRight: '8%', marginTop: '2%' }
                     }>
                         <div className="card-image">
                             <img className="img-fluid" src={project.image} alt={project.projectName}
-                                style={{ zIndex: '2' }} />
+                                style={{ zIndex: '2',width:"100%" }} />
                         </div>
                         <div className="card-content">
                             <span className="card-title" style={{ color: 'rgb(0,0,0)' }}>{project.projectName}</span>
