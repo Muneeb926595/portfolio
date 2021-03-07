@@ -87,7 +87,7 @@ function Contact() {
                                             Address</h6>
                                         <p
                                             style={{ color: '#696969', fontFamily: 'Roboto, sans-serif', fontSize: '15px', fontWeight: '300' }}>
-                                            Come visit us: Street 3, Jannah Lane Range road, Rawalpindi.<br /></p>
+                                             Street 3, Jannah Lane Range road, Rawalpindi.<br /></p>
                                     </div>
                                 </div>
                                 <div className="d-flex flex-row">
