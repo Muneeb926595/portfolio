@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React, { Suspense } from "react";
 
-import Layout from "./@layouts/Layout";
 import "./App.css";
 import { Home, About, Services, Portfolio, Client, Contact } from "@modules";
 //make pages lazy that are not going to be used frequently
